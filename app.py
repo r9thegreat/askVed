@@ -5,7 +5,7 @@
 # from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 import streamlit as st
-from openai import OpenAI
+import openai
 
 treatment_plan = """Treatment Plan
 1. [Treatment Name or Medication]
@@ -34,7 +34,7 @@ Tips for Success:
 
 (Repeat for additional treatments…)"""
 
-client = OpenAI(
+client = openai(
   base_url="https://openrouter.ai/api/v1",
   api_key="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",
 )
